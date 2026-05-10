@@ -55,8 +55,11 @@
                 <label>Preferred Date *</label>
                 <input v-model="booking.date" type="date" required />
               </div>
-              <button type="submit" class="btn btn-submit">Send via WhatsApp</button>
-              <p class="form-note">This will open WhatsApp with your booking details</p>
+              <div class="form-buttons">
+                <button type="submit" class="btn btn-submit">Send via WhatsApp</button>
+                <button type="button" class="btn btn-email-submit" @click="submitEmail">Send via Email</button>
+              </div>
+              <p class="form-note">Choose WhatsApp or Email to send your booking details</p>
             </form>
           </div>
         </div>
@@ -74,10 +77,10 @@ export default {
     }
   },
   methods: {
-    submitBooking() {
+    buildMessage() {
       const b = this.booking
       const date = b.date ? new Date(b.date).toLocaleDateString('en-ZA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) : 'Not specified'
-      const lines = [
+      return [
         `Hi KRISH's Car Service,`,
         ``,
         `Name: ${b.name} ${b.surname}`,
@@ -87,8 +90,21 @@ export default {
         ``,
         `Please let me know if that works. Thanks!`
       ].join('\n')
-      const url = `https://wa.me/27740789555?text=${encodeURIComponent(lines)}`
+    },
+    submitBooking() {
+      const msg = this.buildMessage()
+      const url = `https://wa.me/27740789555?text=${encodeURIComponent(msg)}`
       window.open(url, '_blank')
+    },
+    submitEmail() {
+      const b = this.booking
+      if (!b.name || !b.surname || !b.vehicle || !b.issue || !b.date) {
+        alert('Please fill in all fields before sending.')
+        return
+      }
+      const subject = `Booking Request – ${b.vehicle}`
+      const body = this.buildMessage()
+      window.location.href = `mailto:krishcarservice@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     }
   }
 }

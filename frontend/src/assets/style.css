@@ -1180,20 +1180,39 @@ a.contact-detail-row:hover {
   gap: 1rem;
 }
 
+.form-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
 .btn-submit {
-  width: 100%;
+  flex: 1;
   padding: 0.95rem;
   font-size: 0.9rem;
-  background: var(--red);
+  background: #25d366;
   color: var(--white);
   font-weight: 700;
   border-radius: 8px;
-  margin-top: 0.75rem;
   letter-spacing: 0.3px;
 }
-
 .btn-submit:hover {
-  background: var(--red-hover);
+  background: #1fb855;
+}
+.btn-email-submit {
+  flex: 1;
+  padding: 0.95rem;
+  font-size: 0.9rem;
+  background: #4285f4;
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.2s;
+}
+.btn-email-submit:hover {
+  background: #3367d6;
 }
 
 .form-note {
