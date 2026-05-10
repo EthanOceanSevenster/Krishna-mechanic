@@ -84,7 +84,7 @@
             <span class="stat-label">Workshop Services</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number">5/5</span>
+            <span class="stat-number">4.7</span>
             <span class="stat-label">Customer Rated</span>
           </div>
         </div>
@@ -199,6 +199,7 @@
           <div class="cta-buttons">
             <a class="btn btn-primary" href="tel:0740789555">Call 074 078 9555</a>
             <a class="btn-whatsapp" href="https://wa.me/27740789555" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a class="btn-email" href="mailto:krishcarservice@gmail.com">Email Us</a>
             <router-link class="btn-outline-dark" to="/contact">Book Online</router-link>
           </div>
         </div>
