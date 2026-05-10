@@ -9,7 +9,7 @@
     <section class="section">
       <div class="container">
         <div class="services-grid">
-          <div class="service-card" v-for="service in services" :key="service.id">
+          <div class="service-card" v-for="service in services" :key="service.id" :id="'service-' + service.id">
             <img :src="service.icon" :alt="service.name" class="service-icon" />
             <h3>{{ service.name }}</h3>
             <p>{{ service.description }}</p>
