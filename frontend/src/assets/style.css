@@ -193,6 +193,15 @@ img {
   color: var(--white) !important;
 }
 
+/* "All Services" sits above the individual services and links to the index page */
+.dropdown-menu .dropdown-item-all {
+  color: var(--white) !important;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  margin-bottom: 0.25rem;
+  padding-bottom: 0.6rem;
+}
+
 /* ===================== NAV CTAs ===================== */
 .nav-ctas {
   display: flex;
@@ -1439,6 +1448,17 @@ a.contact-detail-row:hover {
 }
 
 .model-tag:hover {
+  border-color: var(--red);
+}
+
+/* Brand tags that link through to a vehicle page */
+a.model-tag {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.model-tag:hover {
+  color: var(--red);
   border-color: var(--red);
 }
 

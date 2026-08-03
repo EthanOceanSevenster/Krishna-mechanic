@@ -4,7 +4,10 @@
   "description": "Frontend for KRISH's Car Service Center",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:client && npm run build:ssr && npm run prerender",
+    "build:client": "vite build",
+    "build:ssr": "vite build --ssr src/entry-server.js",
+    "prerender": "node prerender.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

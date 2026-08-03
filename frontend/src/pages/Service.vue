@@ -4,7 +4,7 @@
     <div class="vehicle-hero">
       <div class="container">
         <span class="vehicle-hero-label">OUR SERVICES</span>
-        <h1>{{ service.name }}</h1>
+        <h1>{{ service.name }} in Brackenfell, Cape Town</h1>
         <p>{{ service.description }}</p>
         <div class="vehicle-hero-btns">
           <router-link class="btn btn-primary" to="/contact">Get A Free Quote</router-link>
@@ -48,7 +48,7 @@
         </div>
         <div class="vehicle-images-grid">
           <div class="vehicle-image-card" v-for="(img, index) in service.images" :key="index">
-            <img :src="img" :alt="service.name + ' service'" loading="lazy" />
+            <img :src="img" :alt="service.name + ' at Krish\'s Car Service Center in Brackenfell, Cape Town'" loading="lazy" />
           </div>
         </div>
       </div>

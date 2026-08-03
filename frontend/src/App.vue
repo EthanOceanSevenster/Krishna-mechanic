@@ -15,6 +15,7 @@
             </button>
             <div class="dropdown-menu">
               <div class="dropdown-column">
+                <router-link to="/services" class="dropdown-item dropdown-item-all">All Services</router-link>
                 <router-link
                   v-for="s in servicesList"
                   :key="s.id"
@@ -62,6 +63,11 @@
             <span class="mobile-arrow" :class="{ rotated: mobileServicesOpen }">&#9662;</span>
           </button>
           <div class="mobile-dropdown-items" v-show="mobileServicesOpen">
+            <router-link
+              to="/services"
+              class="mobile-sub-link"
+              @click="mobileOpen = false; mobileServicesOpen = false"
+            >All Services</router-link>
             <router-link
               v-for="s in servicesList"
               :key="s.id"

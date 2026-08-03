@@ -123,14 +123,38 @@
           <p>Everything your vehicle needs in one place</p>
         </div>
         <div class="services-grid">
-          <div class="service-card" v-for="service in allServices" :key="service.id">
+          <router-link
+            class="service-card service-card-link"
+            v-for="service in allServices"
+            :key="service.id"
+            :to="'/service/' + service.slug"
+          >
             <h3>{{ service.name }}</h3>
             <p>{{ service.description }}</p>
             <span class="service-price">{{ service.price }}</span>
-          </div>
+          </router-link>
         </div>
         <div class="section-cta">
           <router-link class="btn btn-dark" to="/contact">Get a Quote</router-link>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vehicle Brands -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Your Vehicle</span>
+          <h2>Brands We Service</h2>
+          <p>Specialist servicing and repairs for all major makes &#8212; petrol and diesel</p>
+        </div>
+        <div class="model-tags">
+          <router-link
+            class="model-tag"
+            v-for="v in allVehicles"
+            :key="v.id"
+            :to="'/vehicle/' + v.slug"
+          >{{ v.name }}</router-link>
         </div>
       </div>
     </section>
@@ -209,7 +233,8 @@
     <!-- Map -->
     <section class="map-fullwidth">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.5!2d18.7!3d-33.87!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDUyJzEyLjAiUyAxOMKwNDInMDAuMCJF!5e0!3m2!1sen!2sza!4v1"
+        title="Krish's Car Service Center — 17 Brass St, Brackenfell, Cape Town"
+        src="https://www.google.com/maps?q=17+Brass+St,+Brackenfell,+Cape+Town,+7550&hl=en&output=embed"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
@@ -219,12 +244,13 @@
 </template>
 
 <script>
-import { services, gallery } from '../data.js'
+import { services, gallery, vehicles } from '../data.js'
 export default {
   name: 'Home',
   computed: {
     galleryPreview() { return gallery.slice(0, 6) },
-    allServices() { return services }
+    allServices() { return services },
+    allVehicles() { return vehicles }
   }
 }
 </script>

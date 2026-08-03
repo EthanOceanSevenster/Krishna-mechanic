@@ -4,7 +4,7 @@
     <div class="vehicle-hero">
       <div class="container">
         <span class="vehicle-hero-label">YOUR VEHICLE</span>
-        <h1>{{ vehicle.name }} Specialist</h1>
+        <h1>{{ vehicle.name }} Service &amp; Repairs in Brackenfell</h1>
         <p>Expert {{ vehicle.name }} servicing, repairs &amp; maintenance in Brackenfell, Cape Town</p>
         <div class="vehicle-hero-btns">
           <router-link class="btn btn-primary" to="/contact">Get A Quote</router-link>
@@ -46,7 +46,7 @@
         </div>
         <div class="vehicle-images-grid">
           <div class="vehicle-image-card" v-for="(img, index) in vehicle.images" :key="index">
-            <img :src="img" :alt="vehicle.name + ' vehicle'" loading="lazy" />
+            <img :src="img" :alt="vehicle.name + ' serviced at Krish\'s Car Service Center in Brackenfell, Cape Town'" loading="lazy" />
           </div>
         </div>
       </div>
@@ -77,12 +77,17 @@
           <p>Full range of mechanical, electrical, and body work</p>
         </div>
         <div class="services-grid">
-          <div class="service-card" v-for="service in allServices" :key="service.id">
-            <img :src="service.icon" :alt="service.name" class="service-icon" loading="lazy" />
+          <router-link
+            class="service-card service-card-link"
+            v-for="service in allServices"
+            :key="service.id"
+            :to="'/service/' + service.slug"
+          >
+            <img :src="service.icon" :alt="vehicle.name + ' ' + service.name.toLowerCase()" class="service-icon" loading="lazy" />
             <h3>{{ service.name }}</h3>
             <p>{{ service.description }}</p>
             <span class="service-price">{{ service.price }}</span>
-          </div>
+          </router-link>
         </div>
       </div>
     </section>

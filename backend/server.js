@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -172,9 +173,15 @@ app.post('/api/booking', (req, res) => {
   res.json({ success: true, message: 'Booking received! We will confirm your appointment shortly.' });
 });
 
-// SPA fallback
+// Fallback. express.static above already serves the prerendered <route>/index.html
+// files, so anything reaching here is a genuine miss — serve the noindex 404 shell
+// with a 404 status rather than the homepage.
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
+  const notFound = path.join(__dirname, '../frontend/dist/404.html');
+  if (fs.existsSync(notFound)) {
+    return res.status(404).sendFile(notFound);
+  }
+  res.status(404).sendFile(path.join(__dirname, '../frontend/dist/index.html'));
 });
 
 app.listen(PORT, () => {
