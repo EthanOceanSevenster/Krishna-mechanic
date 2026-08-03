@@ -25,7 +25,7 @@
           <div class="vehicle-about-info">
             <div class="vehicle-info-card">
               <h4>Workshop Location</h4>
-              <p>17 Brass St, Brackenfell<br>Cape Town, 7550</p>
+              <p>17 Brass Street, Brackenfell<br>Cape Town, 7550</p>
               <h4>Hours</h4>
               <p>Mon–Fri: 8am–5pm<br>Sat: 8am–1pm</p>
               <h4>Contact</h4>

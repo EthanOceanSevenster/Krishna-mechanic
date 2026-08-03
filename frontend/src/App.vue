@@ -127,7 +127,7 @@
             </div>
             <div class="footer-col">
               <h4>Location</h4>
-              <p>17 Brass St<br>Brackenfell<br>Cape Town, 7550</p>
+              <p>17 Brass Street<br>Brackenfell<br>Cape Town, 7550</p>
               <a href="https://www.google.com/maps/search/?api=1&query=17+Brass+St+Brackenfell+Cape+Town+7550" target="_blank" rel="noopener" class="footer-link">Get Directions &rarr;</a>
             </div>
             <div class="footer-col">

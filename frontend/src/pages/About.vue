@@ -19,7 +19,7 @@
           </div>
           <div class="about-block">
             <h2>Brackenfell Based</h2>
-            <p>Located at 17 Brass St, Brackenfell, Cape Town. Easy to find and conveniently positioned for anyone in the Northern Suburbs. Open Monday to Friday 8am–5pm and Saturday mornings.</p>
+            <p>Located at 17 Brass Street, Brackenfell, Cape Town. Easy to find and conveniently positioned for anyone in the Northern Suburbs. Open Monday to Friday 8am–5pm and Saturday mornings.</p>
           </div>
           <div class="about-block">
             <h2>Get in Touch</h2>

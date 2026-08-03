@@ -23,7 +23,7 @@
               </a>
               <div class="contact-detail-row">
                 <strong>Address</strong>
-                <span>17 Brass St, Brackenfell, Cape Town, 7550</span>
+                <span>17 Brass Street, Brackenfell, Cape Town, 7550</span>
               </div>
               <div class="contact-detail-row">
                 <strong>Hours</strong>

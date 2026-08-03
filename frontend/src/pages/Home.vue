@@ -9,7 +9,7 @@
           <h1>Krish's Car Service Center</h1>
           <p class="hero-tagline">Mechanical Repairs &bull; Spray Painting &bull; Panel Beating &bull; Auto Electrical</p>
           <p class="hero-free-quote">FREE Quotes &amp; Diagnostics</p>
-          <p class="hero-address">17 Brass St, Brackenfell, Cape Town, 7550</p>
+          <p class="hero-address">17 Brass Street, Brackenfell, Cape Town, 7550</p>
           <div class="hero-buttons">
             <router-link class="btn btn-primary" to="/contact">Get A Free Quote</router-link>
             <a class="btn btn-primary" href="tel:0740789555">Call Now</a>
@@ -22,6 +22,7 @@
             <span class="hero-hours-sep">|</span>
             <span>Sun: Closed</span>
           </div>
+          <p class="hero-walkin">No appointment needed &#8212; drive in any time during business hours. After-hours work by arrangement.</p>
         </div>
       </div>
     </section>
@@ -84,8 +85,8 @@
             <span class="stat-label">Workshop Services</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number">4.7</span>
-            <span class="stat-label">Customer Rated</span>
+            <span class="stat-number">5.0</span>
+            <span class="stat-label">Google Rated</span>
           </div>
         </div>
       </div>
@@ -201,7 +202,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <h3>Conveniently Located</h3>
-            <p>Easy to find at 17 Brass St, Brackenfell. Call us on 074 078 9555 for a quote or to book your vehicle in.</p>
+            <p>Easy to find at 17 Brass Street, Brackenfell. Call us on 074 078 9555 for a quote or to book your vehicle in.</p>
           </div>
           <div class="why-item">
             <div class="why-icon">
@@ -233,7 +234,7 @@
     <!-- Map -->
     <section class="map-fullwidth">
       <iframe
-        title="Krish's Car Service Center — 17 Brass St, Brackenfell, Cape Town"
+        title="Krish's Car Service Center — 17 Brass Street, Brackenfell, Cape Town"
         src="https://www.google.com/maps?q=17+Brass+St,+Brackenfell,+Cape+Town,+7550&hl=en&output=embed"
         allowfullscreen=""
         loading="lazy"

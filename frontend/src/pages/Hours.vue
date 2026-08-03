@@ -3,7 +3,7 @@
     <section class="page-header">
       <div class="container">
         <h1>Hours & Location</h1>
-        <p>17 Brass St, Brackenfell, Cape Town, 7550</p>
+        <p>17 Brass Street, Brackenfell, Cape Town, 7550</p>
       </div>
     </section>
     <section class="section">
@@ -20,7 +20,7 @@
               <li><span class="day">Sunday</span><span class="closed">Closed</span></li>
             </ul>
             <div class="hours-address">
-              <p><strong>17 Brass St, Brackenfell, Cape Town, 7550</strong></p>
+              <p><strong>17 Brass Street, Brackenfell, Cape Town, 7550</strong></p>
               <p><a href="tel:0740789555">074 078 9555</a></p>
               <a class="hours-directions" href="https://www.google.com/maps/search/?api=1&query=17+Brass+St+Brackenfell+Cape+Town+7550" target="_blank" rel="noopener">Get Directions &rarr;</a>
             </div>

@@ -16,7 +16,7 @@ export const SITE = {
   phone: '074 078 9555',
   phoneIntl: '+27740789555',
   email: 'krishcarservice@gmail.com',
-  street: '17 Brass St',
+  street: '17 Brass Street',
   locality: 'Brackenfell',
   city: 'Cape Town',
   region: 'Western Cape',
@@ -26,7 +26,9 @@ export const SITE = {
   // 1360x1020 workshop photo. A PNG fallback follows it for consumers that reject WebP.
   ogImage: '/images/IMG_20211218_200923.webp',
   ogImageFallback: '/logo.png',
-  mapUrl: 'https://www.google.com/maps/search/?api=1&query=17+Brass+St+Brackenfell+Cape+Town+7550',
+  mapUrl: 'https://www.google.com/maps/search/?api=1&query=17+Brass+Street+Brackenfell+Cape+Town+7550',
+  // Profiles Google can use to confirm this is one real business entity.
+  sameAs: ['https://www.facebook.com/profile.php?id=61592448076302'],
   areaServed: [
     'Brackenfell', 'Kraaifontein', 'Kuils River', 'Durbanville', 'Bellville',
     'Parow', 'Goodwood', 'Northern Suburbs', 'Cape Town'
@@ -80,6 +82,7 @@ export function businessSchema() {
       addressCountry: SITE.country
     },
     hasMap: SITE.mapUrl,
+    sameAs: SITE.sameAs,
     areaServed: SITE.areaServed.map((name) => ({ '@type': 'Place', name })),
     openingHoursSpecification: [
       {
@@ -151,7 +154,7 @@ const PAGES = {
   '/contact': {
     title: "Book a Service or Get a Free Quote | Krish's",
     description:
-      'Book your car in at 17 Brass St, Brackenfell, Cape Town. Send your booking by WhatsApp or email, or call 074 078 9555. Open Mon–Fri 8am–5pm, Sat 8am–1pm.'
+      'Book your car in at 17 Brass Street, Brackenfell, Cape Town. Send your booking by WhatsApp or email, or call 074 078 9555. Open Mon–Fri 8am–5pm, Sat 8am–1pm.'
   }
 }
 

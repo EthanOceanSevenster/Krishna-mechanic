@@ -15,12 +15,14 @@ app.use(express.static(path.join(__dirname, '../frontend/dist')));
 // Business info API
 app.get('/api/info', (req, res) => {
   res.json({
-    name: "KRISH's Car Service Center",
-    address: "17 Brass St, Brackenfell, Cape Town, 7550",
+    name: "Krish's Car Service Center",
+    address: "17 Brass Street, Brackenfell, Cape Town, 7550",
     phone: "074 078 9555",
     email: "krishcarservice@gmail.com",
-    rating: 4.7,
-    reviewCount: 3,
+    // Mirrors the live Google Business Profile. Update here when it changes —
+    // do not publish a figure the profile doesn't back up.
+    rating: 5.0,
+    reviewCount: 2,
     hours: {
       monday: { open: "08:00", close: "17:00" },
       tuesday: { open: "08:00", close: "17:00" },
@@ -96,30 +98,16 @@ app.get('/api/services', (req, res) => {
 });
 
 // Reviews API
+//
+// Deliberately empty. This previously returned three fabricated reviews with
+// invented customer names. Publishing those is a misleading representation
+// under the Consumer Protection Act, and marking them up as structured data
+// would breach Google's review guidelines.
+//
+// Populate this only with real reviews copied from the Google Business Profile,
+// keeping the reviewer's name and wording as written.
 app.get('/api/reviews', (req, res) => {
-  res.json([
-    {
-      id: 1,
-      name: "Johan van der Merwe",
-      rating: 5,
-      text: "Excellent service! Krish diagnosed my car's problem quickly and the repair was done same day. Very fair pricing too. Highly recommended!",
-      date: "2 months ago"
-    },
-    {
-      id: 2,
-      name: "Ayesha Petersen",
-      rating: 5,
-      text: "Best mechanic in Brackenfell. Honest, reliable and the work is always top quality. Won't take my car anywhere else.",
-      date: "3 months ago"
-    },
-    {
-      id: 3,
-      name: "David Naidoo",
-      rating: 4,
-      text: "Good service overall. Had my brakes and suspension done here. Reasonable prices and they explain everything before doing the work.",
-      date: "5 months ago"
-    }
-  ]);
+  res.json([]);
 });
 
 // Gallery API

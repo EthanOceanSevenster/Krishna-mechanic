@@ -29,7 +29,7 @@
               <h4>Free Quotes</h4>
               <p>We provide free assessments and quotes on all services. No obligation.</p>
               <h4>Workshop Location</h4>
-              <p>17 Brass St, Brackenfell<br>Cape Town, 7550</p>
+              <p>17 Brass Street, Brackenfell<br>Cape Town, 7550</p>
               <h4>Contact</h4>
               <p><a href="tel:0740789555">074 078 9555</a></p>
             </div>

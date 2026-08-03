@@ -505,6 +505,15 @@ img {
   opacity: 0.5;
 }
 
+/* Walk-ins welcome — sits just under the hours so the two read together */
+.hero-walkin {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  opacity: 0.6;
+  max-width: 34rem;
+}
+
 /* ===================== SECTIONS ===================== */
 .section {
   padding: 6rem 2rem;
