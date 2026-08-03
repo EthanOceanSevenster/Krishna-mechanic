@@ -6,8 +6,11 @@
     <meta name="theme-color" content="#111111" />
     <!-- Google only reads ICO, PNG, GIF, JPEG and SVG favicons — an AVIF one is
          ignored and the search result falls back to a generic globe. -->
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <!-- Google wants a multiple of 48px square, so the 96x96 PNG is listed first
+         and the .ico declares "any" rather than pinning a 32px hint. -->
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
