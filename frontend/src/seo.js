@@ -63,7 +63,14 @@ export function businessSchema() {
     '@type': 'AutoRepair',
     '@id': BUSINESS_ID,
     name: SITE.name,
-    alternateName: "Krish's Car Service Centre",
+    // Spellings customers actually use. "Krishna" is a common misremembering of
+    // "Krish's" and currently sends people to an unrelated workshop in India.
+    alternateName: [
+      "Krish's Car Service Centre",
+      'Krishna Car Service Center',
+      "Krishna's Car Service Center",
+      'Krish Car Service Center'
+    ],
     description:
       'Mechanical repairs, spray painting, panel beating and auto electrical work on all makes and models in Brackenfell, Cape Town.',
     url: SITE.url + '/',

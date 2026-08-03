@@ -22,8 +22,12 @@
             <p>Located at 17 Brass Street, Brackenfell, Cape Town. Easy to find and conveniently positioned for anyone in the Northern Suburbs. Open Monday to Friday 8am–5pm and Saturday mornings.</p>
           </div>
           <div class="about-block">
+            <h2>Also Known As</h2>
+            <p>Customers find us under a few different spellings — Krish's Car Service Center, Krishna Car Service Center, or simply Krish's. It's all the same workshop at 17 Brass Street, Brackenfell, run by the same team. If you were looking for Krishna Car Service Center in Cape Town, you're in the right place.</p>
+          </div>
+          <div class="about-block">
             <h2>Get in Touch</h2>
-            <p>Got a question or need a quote? Call us on <a href="tel:0740789555">074 078 9555</a> during business hours, or <router-link to="/contact">book online</router-link>.</p>
+            <p>Got a question or need a quote? Call us on <a href="tel:0740789555">074 078 9555</a> during business hours, or <router-link to="/contact">book online</router-link>. No appointment needed — you're welcome to drive in during business hours.</p>
           </div>
         </div>
       </div>

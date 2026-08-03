@@ -834,6 +834,52 @@ img {
   line-height: 1.7;
 }
 
+/* ===================== FLOATING WHATSAPP ===================== */
+/* Sits above page content but below the gallery lightbox (z-index 2000). */
+.whatsapp-fab {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  height: 56px;
+  padding: 0 1.1rem 0 1.05rem;
+  border-radius: 28px;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.whatsapp-fab svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.whatsapp-fab:hover,
+.whatsapp-fab:focus-visible {
+  background: #1ebe5b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.34);
+  color: #fff;
+}
+
+.whatsapp-fab:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-fab { transition: none; }
+  .whatsapp-fab:hover { transform: none; }
+}
+
 /* ===================== FULL WIDTH MAP ===================== */
 .map-fullwidth {
   width: 100vw;
@@ -1648,6 +1694,10 @@ a.model-tag:hover {
   .nav-ctas { display: none; }
   .mobile-toggle { display: block; }
   .nav-tagline { font-size: 0.55rem; letter-spacing: 1.5px; }
+
+  /* Collapse to a plain circle on phones so it doesn't cover page content */
+  .whatsapp-fab { width: 56px; padding: 0; justify-content: center; gap: 0; }
+  .whatsapp-fab-label { display: none; }
 
   .hero h1 { font-size: 2.2rem; letter-spacing: -1px; }
   .hero-subtitle { font-size: 0.9rem; }
